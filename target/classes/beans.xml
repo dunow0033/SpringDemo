@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="student1" class="com.myspring.SpringDemo.Student">
+    	<property name="studentid" value="1" />
+    	<property name="studentname" value="Jorden" />
+    	<property name="score" value="90" />
+    </bean>
+    <bean id="student2" class="com.myspring.SpringDemo.Student">
+    	<property name="studentid" value="2"/>
+    	<property name="studentname" value="Mark"/>
+    	<property name="score" value="90"/>
+    </bean>
+    <bean id="college1" class="com.myspring.SpringDemo.College">
+    	<property name="collegecode" value="1" />
+    	<property name="collegename" value="Finance College" />
+    	<property name="city" value="New York" />
+    	<property name="student" ref="student2" />
+    </bean>
+    <bean id="emp1" class="com.myspring.SpringDemo.Employee">
+    	<property name="empid" value="1" />
+    	<property name="empname" value="Mark"/>
+    	<property name="salary" value="99.91"/>
+    </bean>
+    <bean id="dept1" class="com.myspring.SpringDemo.Department">
+    	<property name="deptcode" value="3" />
+    	<property name="deptname" value="Clothes"/>
+    	<property name="city" value="Seattle"/>
+    	<property name="emp" ref="emp1" />
+    </bean>
+ </beans> 
